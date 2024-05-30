@@ -47,7 +47,7 @@ function EmployeeList() {
   const changeEmployeeStatus = async (record, status) => {
     try {
         dispatch(showLoading());
-        const response = await axios.post('/api/admin/change-employee-status', { employeeId: record._id, userId: record.userId, status: status}, {
+        const response = await axios.post('https://demo-central-production.up.railway.app/api/admin/change-employee-status', { employeeId: record._id, userId: record.userId, status: status}, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

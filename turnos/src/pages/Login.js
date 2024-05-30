@@ -14,7 +14,7 @@ function Login() {
     const login = async (values) => {
         try {
             dispatch(showLoading());
-            const response = await axios.post('/api/user/login', values);
+            const response = await axios.post('https://demo-central-production.up.railway.app/api/user/login', values);
             dispatch(hideLoading());
             if (response.data.success) {
                 toast.success(response.data.message);

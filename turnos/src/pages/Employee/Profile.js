@@ -17,7 +17,7 @@ function Profile() {
   const onFinish = async (values) =>{
     try {
         dispatch(showLoading());
-        const response = await axios.post('/api/employee/update-employee-profile', 
+        const response = await axios.post('https://demo-central-production.up.railway.app/api/employee/update-employee-profile', 
             {
               ...values,
               userId: user._id,
@@ -47,7 +47,7 @@ const getEmployeeData = async() => {
   try {
       dispatch(showLoading());
       const response = await axios.post(
-          '/api/employee/get-employee-info-by-userid', 
+          'https://demo-central-production.up.railway.app/api/employee/get-employee-info-by-userid', 
           {
             userId: params.employeeId,
           },

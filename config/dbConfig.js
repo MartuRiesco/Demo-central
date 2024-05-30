@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://riescomartina3:e9HFT9gxIMGBKrqn@cluster0.zokmrg4.mongodb.net/turnos'
+mongoose.connect(process.env.MONGO_URI
 
 );
 
