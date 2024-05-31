@@ -12,7 +12,7 @@ function EmployeeList() {
   const getEmployeeData = async () => {
     try {
         dispatch(showLoading());
-        const response = await axios.get('/api/admin/get-all-employees', {
+        const response = await axios.get('https://demo-central-production.up.railway.app/api/admin/get-all-employees', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -28,7 +28,7 @@ function EmployeeList() {
   const deleteService = async (employeeId)=>{
     try {
       dispatch(showLoading());
-      const response = await axios.delete('/api/admin/delete-service', 
+      const response = await axios.delete('https://demo-central-production.up.railway.app/api/admin/delete-service', 
       { data: {
         employeeId: employeeId
       }},{
